@@ -5,7 +5,7 @@ async function handler(req, res) {
     const cars = await allCars();
     res.status(200).json(cars);
   } catch (err) {
-    re.status(400).json({ message: err.message });
+    res.status(400).json({ message: "Failed to get all cars" });
   }
 }
 

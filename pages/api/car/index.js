@@ -1,6 +1,8 @@
-import { createCar } from "../../../lib";
+import { connect, createCar } from "../../../lib";
 
 async function handler(req, res) {
+  await connect();
+
   switch (req.method) {
     case "POST":
       try {
